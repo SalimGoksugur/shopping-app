@@ -102,7 +102,7 @@ public class CommentServiceImpl implements CommentService {
 	}
 	
 	private Comment findById(Long id) {
-		return commentRepository.findById(id).orElseThrow(()-> new ItemNotFoundException(ErrorMessages.ITEM_NOT_FOUND.toString()));
+		return commentRepository.findById(id).orElseThrow(()-> new ItemNotFoundException(ErrorMessages.COMMENT_NOT_FOUND.toString()));
 	}
 
 }

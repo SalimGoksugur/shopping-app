@@ -17,7 +17,7 @@ import com.patika.shoppingapp.response.RestResponse;
 @Service
 public class ProductServiceImpl implements ProductService {
 	
-	private ProductRepository productRepository;
+	private  ProductRepository productRepository;
 	
 	public ProductServiceImpl(ProductRepository productRepository) {
 		
@@ -76,7 +76,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product getProductEntityById(Long id) {
 		
-		return productRepository.findById(id).orElseThrow( ()->new ItemNotFoundException(ErrorMessages.ITEM_NOT_FOUND.toString()));
+		return productRepository.findById(id).orElseThrow( ()->new ItemNotFoundException(ErrorMessages.PRODUCT_NOT_FOUND.toString()));
 	}
 	
 
